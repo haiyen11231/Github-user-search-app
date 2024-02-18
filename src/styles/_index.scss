@@ -1,41 +1,56 @@
+@import "./variables";
 @import "./components/search-section";
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 img {
-    display: : block;
-    max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
 a {
-    text-decoration: none;
-    display: inline-block;
+  text-decoration: none;
+  display: inline-block;
 }
 
-*, 
-::after, 
+*,
+::after,
 ::before {
-    box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
+  margin: 0;
+  font-family: "Space Mono", monospace;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 button {
-    border: none;
-    outline: none;
+  border: none;
+  outline: none;
 }
 
 ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 button,
 a {
-    cursor: pointer;
+  cursor: pointer;
+}
+
+main {
+  background-color: hsl(220, 40%, 13%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.home__container {
+  width: 50%;
 }
