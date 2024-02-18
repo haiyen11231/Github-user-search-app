@@ -53,4 +53,26 @@ main {
 
 .home__container {
   width: 50%;
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    .navbar__title {
+      font-size: 32px;
+      color: $white;
+    }
+
+    .navbar__btn {
+      background-color: transparent;
+      background-image: url(../assets/icon-sun.svg);
+      color: $white;
+      background-repeat: no-repeat;
+      background-position: right;
+      width: 100px;
+      font-weight: 700;
+      font-size: 13px;
+    }
+  }
 }
