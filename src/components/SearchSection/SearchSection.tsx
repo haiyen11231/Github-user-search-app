@@ -1,6 +1,11 @@
 import iconSearch from "@/assets/icon-search.svg";
 
-const SearchSection = () => {
+interface SearchSectionProps {
+  onClick: React.MouseEventHandler<HTMLButtonElement>;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}
+
+const SearchSection = ({ onClick, onChange }: SearchSectionProps) => {
   return (
     <section className="search-section">
       <div className="search-section_left">
@@ -14,9 +19,12 @@ const SearchSection = () => {
           className="search-section_input"
           type="text"
           placeholder="Search Github username..."
+          onChange={(e: any) => onChange(e.target.value)}
         />
       </div>
-      <button className="search-section_btn">Search</button>
+      <button className="search-section_btn" onClick={onClick}>
+        Search
+      </button>
     </section>
   );
 };
