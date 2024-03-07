@@ -92,18 +92,29 @@
     display: flex;
     justify-content: space-between;
     width: 80%;
+
+    .info-card__media-section {
+      width: 50%;
+    }
   }
 
   .info-card__media-item {
     display: flex;
     color: $bg-content;
 
-    p {
+    p,
+    a {
       opacity: 0.75;
+      color: $bg-content;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
     }
 
     &:first-child {
       margin-bottom: 16px;
+      margin-right: 16px;
     }
 
     svg {
@@ -125,6 +136,9 @@
 
     .info-card__media {
       flex-direction: column;
+      .info-card__media-section {
+        width: 100%;
+      }
     }
 
     .info-card__media-section {
