@@ -191,6 +191,42 @@
   }
 }
 
+// @media (prefers-color-scheme: light) {
+//   .info-card {
+//     background-color: $bg-content;
+//     .info-card__top {
+//       .info-card__header {
+//         color: $user-name-color;
+//       }
+//     }
+
+//     .info-card__header-desc {
+//       color: $text-color;
+//     }
+
+//     .info-card__bottom-content {
+//       background-color: $bg-main;
+//       .title {
+//         color: $text-color;
+//       }
+
+//       .number {
+//         color: $number-color;
+//       }
+//     }
+
+//     .info-card__media-item {
+//       color: $text-color;
+
+//       p,
+//       a {
+//         opacity: 1;
+//         color: $text-color;
+//       }
+//     }
+//   }
+// }
+
 // .info-card__left {
 //   width: 30%;
 //   margin-right: 32px;
