@@ -43,6 +43,17 @@
       background-color: $btn-hover;
     }
   }
+
+  .search-delete-icon {
+    display: flex;
+    align-items: center;
+    background: transparent;
+
+    i {
+      color: $white;
+      font-size: 18px;
+    }
+  }
 }
 
 // @media (prefers-color-scheme: light) {

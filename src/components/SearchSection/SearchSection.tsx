@@ -3,9 +3,18 @@ import iconSearch from "@/assets/icon-search.svg";
 interface SearchSectionProps {
   onClick: React.MouseEventHandler<HTMLButtonElement>;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  inputRef: any;
+  clearSearch: any;
+  onClear: any;
 }
 
-const SearchSection = ({ onClick, onChange }: SearchSectionProps) => {
+const SearchSection = ({
+  onClick,
+  onChange,
+  inputRef,
+  clearSearch,
+  onClear,
+}: SearchSectionProps) => {
   return (
     <section className="search-section">
       <div className="search-section_left">
@@ -20,7 +29,13 @@ const SearchSection = ({ onClick, onChange }: SearchSectionProps) => {
           type="text"
           placeholder="Search Github username..."
           onChange={onChange}
+          ref={inputRef}
         />
+        {clearSearch && (
+          <button onClick={onClear} className="search-delete-icon">
+            <i className="fa-solid fa-xmark"></i>
+          </button>
+        )}
       </div>
       <button className="search-section_btn" onClick={onClick}>
         Search
