@@ -129,6 +129,12 @@
 @media screen and (max-width: $breakpoint-md) {
   .info-card {
     padding: 16px;
+    .info-card__avatar {
+      img {
+        height: 90px;
+        width: 90px;
+      }
+    }
 
     .info-card__bottom-content {
       padding: 16px;
