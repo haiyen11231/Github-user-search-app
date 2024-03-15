@@ -7,7 +7,7 @@ interface SearchSectionProps {
   clearSearch: any;
   onClear: any;
 }
-
+// isClearable
 const SearchSection = ({
   onClick,
   onChange,
@@ -31,12 +31,14 @@ const SearchSection = ({
           onChange={onChange}
           ref={inputRef}
         />
+
         {clearSearch && (
           <button onClick={onClear} className="search-delete-icon">
             <i className="fa-solid fa-xmark"></i>
           </button>
         )}
       </div>
+
       <button className="search-section_btn" onClick={onClick}>
         Search
       </button>
