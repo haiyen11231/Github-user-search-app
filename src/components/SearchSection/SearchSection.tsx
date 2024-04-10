@@ -8,6 +8,8 @@ interface SearchSectionProps {
   onClear: any;
 }
 // isClearable
+// should + V
+// is + adj
 const SearchSection = ({
   onClick,
   onChange,

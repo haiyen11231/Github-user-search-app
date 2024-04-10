@@ -5,7 +5,9 @@ import { useState, useEffect, useRef } from "react";
 export default function Home() {
   const [username, setUsername] = useState<string>("");
   const [result, setResult] = useState({});
-  const [displayInfoCard, setDisplayInfoCard] = useState<boolean | undefined>(undefined);
+  const [displayInfoCard, setDisplayInfoCard] = useState<boolean | undefined>(
+    undefined
+  );
   const [isClear, setIsClear] = useState<boolean>(false);
   const ref = useRef(null);
 
@@ -44,7 +46,7 @@ export default function Home() {
 
   const [sv, setSv] = useState<string>("");
   const handleChange = (e: any) => {
-    setSv(e.target.value)
+    setSv(e.target.value);
     if (e.target.value) setIsClear(true);
   };
 
@@ -71,10 +73,9 @@ export default function Home() {
     if (username !== "") {
       console.log("username: ", username);
       getData();
-
-  
     }
   }, [username]);
+
   return (
     <main>
       <div className="home__container">
@@ -112,11 +113,12 @@ export default function Home() {
             twitter={result?.twitter_username}
             company={result?.company}
             userName={result?.login}
-          />)}
+          />
+        )}
         {/* )} {username && !displayInfoCard && ( */}
 
-           {displayInfoCard === false && (
-        {username && !displayInfoCard && (
+        {/* {displayInfoCard === false && ({username && !displayInfoCard && (<div className="error">User not found</div>)} */}
+        {displayInfoCard === false && username && !displayInfoCard && (
           <div className="error">User not found</div>
         )}
       </div>
